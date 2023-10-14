@@ -3,13 +3,13 @@ from selene.support import by
 from selene.support.shared.jquery_style import s
 from allure_commons.types import Severity
 
+
 @allure.tag("github")
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "aistabk")
 @allure.feature("Проверка наличия Issues в репозитории")
 @allure.story("Как пользователь я хочу видеть в репозитории созданные ранее issues")
 @allure.link("https://github.com", name="Testing")
-
 def test_decorator_steps():
     search_for_repository("aistabk/qa_guru_8_9")
     go_to_repository("aistabk/qa_guru_8_9")

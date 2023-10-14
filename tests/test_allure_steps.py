@@ -13,7 +13,6 @@ def test_dynamic_steps():
     allure.dynamic.story("Как пользователь я хочу видеть в репозитории созданные ранее issues")
     allure.dynamic.link("https://github.com", name="Testing")
 
-
     with allure.step("Найти репозиторий через поиск"):
         s(".search-input").click()
         s("#query-builder-test").send_keys("aistabk/qa_guru_8_9")
@@ -27,6 +26,3 @@ def test_dynamic_steps():
 
     with allure.step("Проверить наличие Issue с именем issue for test"):
         s(by.partial_text("issue for test")).should(be.visible)
-
-
-
